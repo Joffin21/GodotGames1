@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=3 uid="uid://bd1onfgvtwmwr"]
+[gd_scene load_steps=17 format=3 uid="uid://bd1onfgvtwmwr"]
 
 [ext_resource type="Script" path="res://scripts/game_manager.gd" id="1_14kp1"]
 [ext_resource type="PackedScene" uid="uid://mn2dxc50dgs1" path="res://scenes/player.tscn" id="1_jukjc"]
@@ -9,6 +9,7 @@
 [ext_resource type="PackedScene" uid="uid://clqgtqnqn2xlp" path="res://scenes/killzone.tscn" id="5_qsrbr"]
 [ext_resource type="PackedScene" uid="uid://cqa3wt706ksgy" path="res://scenes/enemy.tscn" id="6_xmcaf"]
 [ext_resource type="FontFile" uid="uid://d4bcolw0a4t1k" path="res://assets/fonts/PixelOperator8.ttf" id="7_3u780"]
+[ext_resource type="PackedScene" uid="uid://clcbphcbtwicq" path="res://scenes/touch_controls.tscn" id="10_tbt06"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_k558u"]
 texture = ExtResource("2_sqdpd")
@@ -348,3 +349,11 @@ theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("7_3u780")
 theme_override_font_sizes/font_size = 8
 text = "Almost there..."
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="TouchControls" parent="Control" instance=ExtResource("10_tbt06")]

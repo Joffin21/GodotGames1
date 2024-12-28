@@ -1,0 +1,434 @@
+[gd_scene load_steps=10 format=3 uid="uid://ddl4s8ygkssxo"]
+
+[ext_resource type="PackedScene" uid="uid://egrtdrfnp0lp" path="res://player.tscn" id="1_ipygi"]
+[ext_resource type="Script" path="res://survivors_game.gd" id="1_pf53k"]
+[ext_resource type="PackedScene" uid="uid://dmtm0j1lccowo" path="res://pine_tree.tscn" id="2_vqaob"]
+[ext_resource type="PackedScene" uid="uid://c6ejifhxd5b7v" path="res://mob.tscn" id="3_82mgo"]
+
+[sub_resource type="Curve2D" id="Curve2D_gckfc"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, -147, -167, 0, 0, 0, 0, 2063, -163, 0, 0, 0, 0, 2060, 1264, 0, 0, 0, 0, -146, 1265, 0, 0, 0, 0, -151, -165)
+}
+point_count = 5
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_ywbqj"]
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_g7a6d"]
+normal = Vector2(1, 0)
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_d0xg2"]
+normal = Vector2(-1, 0)
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_v22xx"]
+normal = Vector2(0, 1)
+
+[node name="Game" type="Node2D"]
+y_sort_enabled = true
+script = ExtResource("1_pf53k")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+layer = -1
+
+[node name="ColorRect" type="ColorRect" parent="CanvasLayer"]
+offset_left = -822.0
+offset_top = -658.0
+offset_right = 2738.0
+offset_bottom = 1735.0
+
+[node name="Player" parent="." instance=ExtResource("1_ipygi")]
+position = Vector2(919, 535)
+
+[node name="Path2D" type="Path2D" parent="Player"]
+position = Vector2(-1737.69, -1123.1)
+scale = Vector2(1.85637, 2.07123)
+curve = SubResource("Curve2D_gckfc")
+
+[node name="PathFollow2D" type="PathFollow2D" parent="Player/Path2D"]
+unique_name_in_owner = true
+position = Vector2(-147, -167)
+rotation = 0.00180995
+
+[node name="Mobs" type="Node" parent="."]
+
+[node name="Mob" parent="Mobs" instance=ExtResource("3_82mgo")]
+position = Vector2(1131, 927)
+
+[node name="Mob3" parent="Mobs" instance=ExtResource("3_82mgo")]
+position = Vector2(1246, 483)
+
+[node name="Mob2" parent="Mobs" instance=ExtResource("3_82mgo")]
+position = Vector2(621, 680)
+
+[node name="PineTrees" type="Node2D" parent="."]
+y_sort_enabled = true
+
+[node name="PineTree" parent="PineTrees" instance=ExtResource("2_vqaob")]
+position = Vector2(310, 306)
+
+[node name="PineTree2" parent="PineTrees" instance=ExtResource("2_vqaob")]
+position = Vector2(1369, 247)
+
+[node name="PineTree3" parent="PineTrees" instance=ExtResource("2_vqaob")]
+position = Vector2(1445, 353)
+
+[node name="PineTree4" parent="PineTrees" instance=ExtResource("2_vqaob")]
+position = Vector2(1500, 264)
+
+[node name="PineTree5" parent="PineTrees" instance=ExtResource("2_vqaob")]
+position = Vector2(335, 730)
+
+[node name="PineTree6" parent="PineTrees" instance=ExtResource("2_vqaob")]
+position = Vector2(729, 870)
+
+[node name="PineTree7" parent="PineTrees" instance=ExtResource("2_vqaob")]
+position = Vector2(560, 459)
+
+[node name="PineTree8" parent="PineTrees" instance=ExtResource("2_vqaob")]
+position = Vector2(1348, 768)
+
+[node name="PineTree9" parent="PineTrees" instance=ExtResource("2_vqaob")]
+position = Vector2(848, 183)
+
+[node name="PineTree10" parent="PineTrees" instance=ExtResource("2_vqaob")]
+position = Vector2(1691, 637)
+
+[node name="PineTree11" parent="PineTrees" instance=ExtResource("2_vqaob")]
+position = Vector2(1548, 947)
+
+[node name="PineTree12" parent="PineTrees" instance=ExtResource("2_vqaob")]
+position = Vector2(117, 1041)
+
+[node name="PineTree13" parent="PineTrees" instance=ExtResource("2_vqaob")]
+position = Vector2(451, 998)
+
+[node name="PineTree14" parent="PineTrees" instance=ExtResource("2_vqaob")]
+position = Vector2(455, 1358)
+
+[node name="PineTree91" parent="PineTrees" instance=ExtResource("2_vqaob")]
+position = Vector2(580, 1640)
+
+[node name="PineTree92" parent="PineTrees" instance=ExtResource("2_vqaob")]
+position = Vector2(947, 1166)
+
+[node name="PineTree93" parent="PineTrees" instance=ExtResource("2_vqaob")]
+position = Vector2(1139, 1683)
+
+[node name="PineTree94" parent="PineTrees" instance=ExtResource("2_vqaob")]
+position = Vector2(1463, 1216)
+
+[node name="PineTree95" parent="PineTrees" instance=ExtResource("2_vqaob")]
+position = Vector2(2493, 1640)
+
+[node name="PineTree96" parent="PineTrees" instance=ExtResource("2_vqaob")]
+position = Vector2(1873, 1704)
+
+[node name="PineTree97" parent="PineTrees" instance=ExtResource("2_vqaob")]
+position = Vector2(2058, 1134)
+
+[node name="PineTree15" parent="PineTrees" instance=ExtResource("2_vqaob")]
+position = Vector2(879, 1410)
+
+[node name="PineTree16" parent="PineTrees" instance=ExtResource("2_vqaob")]
+position = Vector2(1244, 1407)
+
+[node name="PineTree17" parent="PineTrees" instance=ExtResource("2_vqaob")]
+position = Vector2(1479, 1436)
+
+[node name="PineTree18" parent="PineTrees" instance=ExtResource("2_vqaob")]
+position = Vector2(2054, 1430)
+
+[node name="PineTree19" parent="PineTrees" instance=ExtResource("2_vqaob")]
+position = Vector2(2349, 1316)
+
+[node name="PineTree20" parent="PineTrees" instance=ExtResource("2_vqaob")]
+position = Vector2(2339, 999)
+
+[node name="PineTree21" parent="PineTrees" instance=ExtResource("2_vqaob")]
+position = Vector2(2285, 653)
+
+[node name="PineTree22" parent="PineTrees" instance=ExtResource("2_vqaob")]
+position = Vector2(2101, 339)
+
+[node name="PineTree23" parent="PineTrees" instance=ExtResource("2_vqaob")]
+position = Vector2(2038, 809)
+
+[node name="PineTree24" parent="PineTrees" instance=ExtResource("2_vqaob")]
+position = Vector2(1813, -7)
+
+[node name="PineTree25" parent="PineTrees" instance=ExtResource("2_vqaob")]
+position = Vector2(2235, 41)
+
+[node name="PineTree26" parent="PineTrees" instance=ExtResource("2_vqaob")]
+position = Vector2(2451, 350)
+
+[node name="PineTree27" parent="PineTrees" instance=ExtResource("2_vqaob")]
+position = Vector2(2463, 79)
+
+[node name="PineTree28" parent="PineTrees" instance=ExtResource("2_vqaob")]
+position = Vector2(2325, 50)
+
+[node name="PineTree29" parent="PineTrees" instance=ExtResource("2_vqaob")]
+position = Vector2(2392, 55)
+
+[node name="PineTree30" parent="PineTrees" instance=ExtResource("2_vqaob")]
+position = Vector2(2249, -276)
+
+[node name="PineTree31" parent="PineTrees" instance=ExtResource("2_vqaob")]
+position = Vector2(1640, -309)
+
+[node name="PineTree32" parent="PineTrees" instance=ExtResource("2_vqaob")]
+position = Vector2(1224, -269)
+
+[node name="PineTree33" parent="PineTrees" instance=ExtResource("2_vqaob")]
+position = Vector2(620, -321)
+
+[node name="PineTree34" parent="PineTrees" instance=ExtResource("2_vqaob")]
+position = Vector2(358, -223)
+
+[node name="PineTree35" parent="PineTrees" instance=ExtResource("2_vqaob")]
+position = Vector2(42, -106)
+
+[node name="PineTree36" parent="PineTrees" instance=ExtResource("2_vqaob")]
+position = Vector2(-158, 20)
+
+[node name="PineTree37" parent="PineTrees" instance=ExtResource("2_vqaob")]
+position = Vector2(-229, 391)
+
+[node name="PineTree38" parent="PineTrees" instance=ExtResource("2_vqaob")]
+position = Vector2(-362, 650)
+
+[node name="PineTree39" parent="PineTrees" instance=ExtResource("2_vqaob")]
+position = Vector2(-248, 1012)
+
+[node name="PineTree40" parent="PineTrees" instance=ExtResource("2_vqaob")]
+position = Vector2(-148, 1236)
+
+[node name="PineTree41" parent="PineTrees" instance=ExtResource("2_vqaob")]
+position = Vector2(-291, 1438)
+
+[node name="PineTree42" parent="PineTrees" instance=ExtResource("2_vqaob")]
+position = Vector2(-160, 1547)
+
+[node name="PineTree43" parent="PineTrees" instance=ExtResource("2_vqaob")]
+position = Vector2(-58, 1559)
+
+[node name="PineTree44" parent="PineTrees" instance=ExtResource("2_vqaob")]
+position = Vector2(25, 1552)
+
+[node name="PineTree45" parent="PineTrees" instance=ExtResource("2_vqaob")]
+position = Vector2(89, 1552)
+
+[node name="PineTree46" parent="PineTrees" instance=ExtResource("2_vqaob")]
+position = Vector2(170, 1552)
+
+[node name="PineTree47" parent="PineTrees" instance=ExtResource("2_vqaob")]
+position = Vector2(-339, 1716)
+
+[node name="PineTree48" parent="PineTrees" instance=ExtResource("2_vqaob")]
+position = Vector2(-403, 1735)
+
+[node name="PineTree49" parent="PineTrees" instance=ExtResource("2_vqaob")]
+position = Vector2(-472, 1749)
+
+[node name="PineTree50" parent="PineTrees" instance=ExtResource("2_vqaob")]
+position = Vector2(-612, 1188)
+
+[node name="PineTree51" parent="PineTrees" instance=ExtResource("2_vqaob")]
+position = Vector2(-717, 655)
+
+[node name="PineTree52" parent="PineTrees" instance=ExtResource("2_vqaob")]
+position = Vector2(-424, 225)
+
+[node name="PineTree53" parent="PineTrees" instance=ExtResource("2_vqaob")]
+position = Vector2(-564, -65)
+
+[node name="PineTree54" parent="PineTrees" instance=ExtResource("2_vqaob")]
+position = Vector2(-290, -191)
+
+[node name="PineTree55" parent="PineTrees" instance=ExtResource("2_vqaob")]
+position = Vector2(-547, -357)
+
+[node name="PineTree56" parent="PineTrees" instance=ExtResource("2_vqaob")]
+position = Vector2(-214, -457)
+
+[node name="PineTree98" parent="PineTrees" instance=ExtResource("2_vqaob")]
+position = Vector2(-93, -450)
+
+[node name="PineTree99" parent="PineTrees" instance=ExtResource("2_vqaob")]
+position = Vector2(-93, -450)
+
+[node name="PineTree100" parent="PineTrees" instance=ExtResource("2_vqaob")]
+position = Vector2(-147, -452)
+
+[node name="PineTree101" parent="PineTrees" instance=ExtResource("2_vqaob")]
+position = Vector2(-45, -468)
+
+[node name="PineTree102" parent="PineTrees" instance=ExtResource("2_vqaob")]
+position = Vector2(-7, -504)
+
+[node name="PineTree103" parent="PineTrees" instance=ExtResource("2_vqaob")]
+position = Vector2(53, -538)
+
+[node name="PineTree104" parent="PineTrees" instance=ExtResource("2_vqaob")]
+position = Vector2(105, -560)
+
+[node name="PineTree57" parent="PineTrees" instance=ExtResource("2_vqaob")]
+position = Vector2(250, -471)
+
+[node name="PineTree58" parent="PineTrees" instance=ExtResource("2_vqaob")]
+position = Vector2(103, -326)
+
+[node name="PineTree59" parent="PineTrees" instance=ExtResource("2_vqaob")]
+position = Vector2(-710, -495)
+
+[node name="PineTree60" parent="PineTrees" instance=ExtResource("2_vqaob")]
+position = Vector2(-689, -302)
+
+[node name="PineTree61" parent="PineTrees" instance=ExtResource("2_vqaob")]
+position = Vector2(-713, 93)
+
+[node name="PineTree62" parent="PineTrees" instance=ExtResource("2_vqaob")]
+position = Vector2(-654, 355)
+
+[node name="PineTree63" parent="PineTrees" instance=ExtResource("2_vqaob")]
+position = Vector2(940, -454)
+
+[node name="PineTree64" parent="PineTrees" instance=ExtResource("2_vqaob")]
+position = Vector2(969, -90)
+
+[node name="PineTree65" parent="PineTrees" instance=ExtResource("2_vqaob")]
+position = Vector2(741, -54)
+
+[node name="PineTree66" parent="PineTrees" instance=ExtResource("2_vqaob")]
+position = Vector2(1355, -475)
+
+[node name="PineTree67" parent="PineTrees" instance=ExtResource("2_vqaob")]
+position = Vector2(1412, -85)
+
+[node name="PineTree68" parent="PineTrees" instance=ExtResource("2_vqaob")]
+position = Vector2(1938, -525)
+
+[node name="PineTree69" parent="PineTrees" instance=ExtResource("2_vqaob")]
+position = Vector2(1978, -294)
+
+[node name="PineTree70" parent="PineTrees" instance=ExtResource("2_vqaob")]
+position = Vector2(2244, -434)
+
+[node name="PineTree71" parent="PineTrees" instance=ExtResource("2_vqaob")]
+position = Vector2(2548, -410)
+
+[node name="PineTree72" parent="PineTrees" instance=ExtResource("2_vqaob")]
+position = Vector2(2558, -91)
+
+[node name="PineTree73" parent="PineTrees" instance=ExtResource("2_vqaob")]
+position = Vector2(2622, 687)
+
+[node name="PineTree74" parent="PineTrees" instance=ExtResource("2_vqaob")]
+position = Vector2(1944, 530)
+
+[node name="PineTree75" parent="PineTrees" instance=ExtResource("2_vqaob")]
+position = Vector2(1832, 1175)
+
+[node name="PineTree76" parent="PineTrees" instance=ExtResource("2_vqaob")]
+position = Vector2(1504, 1013)
+
+[node name="PineTree77" parent="PineTrees" instance=ExtResource("2_vqaob")]
+position = Vector2(1535, 1413)
+
+[node name="PineTree78" parent="PineTrees" instance=ExtResource("2_vqaob")]
+position = Vector2(2001, 1482)
+
+[node name="PineTree79" parent="PineTrees" instance=ExtResource("2_vqaob")]
+position = Vector2(2370, 1382)
+
+[node name="PineTree80" parent="PineTrees" instance=ExtResource("2_vqaob")]
+position = Vector2(2292, 1387)
+
+[node name="PineTree81" parent="PineTrees" instance=ExtResource("2_vqaob")]
+position = Vector2(501, 1059)
+
+[node name="PineTree82" parent="PineTrees" instance=ExtResource("2_vqaob")]
+position = Vector2(-189, 448)
+
+[node name="PineTree83" parent="PineTrees" instance=ExtResource("2_vqaob")]
+position = Vector2(-317, 702)
+
+[node name="PineTree84" parent="PineTrees" instance=ExtResource("2_vqaob")]
+position = Vector2(-709, 400)
+
+[node name="PineTree85" parent="PineTrees" instance=ExtResource("2_vqaob")]
+position = Vector2(-642, 96)
+
+[node name="PineTree86" parent="PineTrees" instance=ExtResource("2_vqaob")]
+position = Vector2(-709, 210)
+
+[node name="PineTree87" parent="PineTrees" instance=ExtResource("2_vqaob")]
+position = Vector2(-659, 881)
+
+[node name="PineTree88" parent="PineTrees" instance=ExtResource("2_vqaob")]
+position = Vector2(-597, 1271)
+
+[node name="PineTree89" parent="PineTrees" instance=ExtResource("2_vqaob")]
+position = Vector2(-592, 1366)
+
+[node name="PineTree90" parent="PineTrees" instance=ExtResource("2_vqaob")]
+position = Vector2(-592, 1366)
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 0.6
+autostart = true
+
+[node name="GameOver" type="CanvasLayer" parent="."]
+unique_name_in_owner = true
+visible = false
+
+[node name="ColorRect" type="ColorRect" parent="GameOver"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0.54902)
+
+[node name="Label" type="Label" parent="GameOver/ColorRect"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -50.5
+offset_top = -11.5
+offset_right = 50.5
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 200
+text = "Game Over :("
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+position = Vector2(1079, 1479)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+shape = SubResource("WorldBoundaryShape2D_ywbqj")
+
+[node name="StaticBody2D2" type="StaticBody2D" parent="."]
+position = Vector2(-583, 530)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D2"]
+shape = SubResource("WorldBoundaryShape2D_g7a6d")
+
+[node name="StaticBody2D3" type="StaticBody2D" parent="."]
+position = Vector2(2452, 605)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D3"]
+shape = SubResource("WorldBoundaryShape2D_d0xg2")
+
+[node name="StaticBody2D4" type="StaticBody2D" parent="."]
+position = Vector2(1097, -438)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D4"]
+shape = SubResource("WorldBoundaryShape2D_v22xx")
+
+[connection signal="health_depleted" from="Player" to="." method="_on_player_health_depleted"]
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

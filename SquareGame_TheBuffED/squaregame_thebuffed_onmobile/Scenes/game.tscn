@@ -1,0 +1,121 @@
+[gd_scene load_steps=6 format=3 uid="uid://c227cyp1qup5t"]
+
+[ext_resource type="FontFile" uid="uid://do0lrr0be6lw6" path="res://Assets/Fonts/Gugi-Regular.ttf" id="1_lt51l"]
+[ext_resource type="Script" path="res://Scripts/start.gd" id="2_0xbyf"]
+[ext_resource type="Script" path="res://Scripts/menu_buttons.gd" id="2_8rwad"]
+[ext_resource type="Script" path="res://Scripts/difficulty.gd" id="4_nhx0q"]
+[ext_resource type="Script" path="res://Scripts/global.gd" id="5_gvdvp"]
+
+[node name="Game" type="Node2D"]
+
+[node name="Background" type="Node2D" parent="."]
+
+[node name="ColorRect" type="ColorRect" parent="Background"]
+offset_right = 576.0
+offset_bottom = 1024.0
+color = Color(0.687215, 0.687215, 0.687215, 1)
+
+[node name="UI" type="Node2D" parent="."]
+
+[node name="Title" type="Label" parent="UI"]
+offset_top = 300.0
+offset_right = 576.0
+offset_bottom = 385.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("1_lt51l")
+theme_override_font_sizes/font_size = 80
+text = "Simplifall"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="MenuButtons" type="Node2D" parent="UI"]
+script = ExtResource("2_8rwad")
+
+[node name="Start" type="Node2D" parent="UI/MenuButtons"]
+script = ExtResource("2_0xbyf")
+
+[node name="StartMenu" type="VBoxContainer" parent="UI/MenuButtons/Start"]
+offset_top = 450.0
+offset_right = 576.0
+offset_bottom = 665.0
+
+[node name="Start" type="Button" parent="UI/MenuButtons/Start/StartMenu"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.317647, 0.309804, 0.352941, 1)
+theme_override_fonts/font = ExtResource("1_lt51l")
+theme_override_font_sizes/font_size = 60
+text = "Start"
+flat = true
+
+[node name="Settings" type="Button" parent="UI/MenuButtons/Start/StartMenu"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.317647, 0.309804, 0.352941, 1)
+theme_override_fonts/font = ExtResource("1_lt51l")
+theme_override_font_sizes/font_size = 60
+text = "Settings
+"
+flat = true
+
+[node name="Quit" type="Button" parent="UI/MenuButtons/Start/StartMenu"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.317647, 0.309804, 0.352941, 1)
+theme_override_fonts/font = ExtResource("1_lt51l")
+theme_override_font_sizes/font_size = 60
+text = "Quit
+"
+flat = true
+
+[node name="Difficulty" type="Node2D" parent="UI/MenuButtons"]
+position = Vector2(576, 0)
+script = ExtResource("4_nhx0q")
+
+[node name="DifficultyMenu" type="VBoxContainer" parent="UI/MenuButtons/Difficulty"]
+offset_top = 450.0
+offset_right = 576.0
+offset_bottom = 665.0
+
+[node name="Easy" type="Button" parent="UI/MenuButtons/Difficulty/DifficultyMenu"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.317647, 0.309804, 0.352941, 1)
+theme_override_fonts/font = ExtResource("1_lt51l")
+theme_override_font_sizes/font_size = 60
+text = "Easy"
+flat = true
+
+[node name="Medium" type="Button" parent="UI/MenuButtons/Difficulty/DifficultyMenu"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.317647, 0.309804, 0.352941, 1)
+theme_override_fonts/font = ExtResource("1_lt51l")
+theme_override_font_sizes/font_size = 60
+text = "Medium"
+flat = true
+
+[node name="Hard" type="Button" parent="UI/MenuButtons/Difficulty/DifficultyMenu"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.317647, 0.309804, 0.352941, 1)
+theme_override_fonts/font = ExtResource("1_lt51l")
+theme_override_font_sizes/font_size = 60
+text = "Hard
+"
+flat = true
+
+[node name="Back" type="Button" parent="UI/MenuButtons/Difficulty/DifficultyMenu"]
+custom_minimum_size = Vector2(0, 200)
+layout_mode = 2
+theme_override_colors/font_color = Color(0.317647, 0.309804, 0.352941, 1)
+theme_override_fonts/font = ExtResource("1_lt51l")
+theme_override_font_sizes/font_size = 60
+text = "Back"
+flat = true
+
+[node name="Score" type="Node2D" parent="."]
+
+[node name="Buttons" type="Node2D" parent="."]
+
+[node name="Emitters" type="Node2D" parent="."]
+
+[node name="Global" type="Node2D" parent="."]
+script = ExtResource("5_gvdvp")
+
+[connection signal="pressed" from="UI/MenuButtons/Start/StartMenu/Start" to="UI/MenuButtons" method="_on_start_pressed"]
+[connection signal="pressed" from="UI/MenuButtons/Difficulty/DifficultyMenu/Back" to="UI/MenuButtons" method="_on_back_pressed"]

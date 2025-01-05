@@ -1,4 +1,4 @@
-# FirstGame
+# First Survivor Game
 
 This is the second game I've ever created. I very closely followed **GDQuest**'s Youtube tutorial (**Your First 2D GAME From Zero in Godot 4 **Vampire Survivor Style****: https://www.youtube.com/watch?v=GwCiGixlqiU&list=PL940QZx0z8pe1tEdJdQJkRsnQrVy8HBYb&index=7). There may be some minor differences in my game and what he ultimately created, but for the most part it is the same. 
 
